@@ -11,7 +11,7 @@ export default class App extends React.Component<AppProps, undefined> {
         return (
             <div className="app">
                 <h1>Hello World!</h1>
-                <p>Foo to the barz</p>
+                <p>Foo to the barz test</p>
                 <img src={reactLogo} height="480"/>
             </div>
         );
