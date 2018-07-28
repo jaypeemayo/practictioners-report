@@ -4,6 +4,7 @@ import "./../assets/scss/App.scss";
 const reactLogo = require("./../assets/img/react_logo.svg");
 
 export interface IMyComponent {
+    name: string;
 }
 
 export default class MyComponent extends React.Component<IMyComponent, undefined> {
