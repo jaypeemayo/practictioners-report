@@ -11,6 +11,7 @@ export default class MyComponent extends React.Component<IMyComponent, undefined
     render() {
         return (
             <div className="app">
+                <h4>{this.props.name}</h4>
                 <h1>Hello World!</h1>
                 <p>Foo to the barz test</p>
                 <img src={reactLogo} height="480"/>
