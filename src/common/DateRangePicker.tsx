@@ -16,29 +16,31 @@ export default class DateRangePicker extends React.Component<IDateRangePickerPro
     render() {
         let props = this.props
         return (<>
-            <div>
-                <DatePicker
-                    onChange={props.onChangeStartDate}
-                    monthsShown={props.monthsShown}
-                    selected={props.startDate}
-                    selectsStart={true}
-                    selectsEnd={false} // todo, check later if can be removed
-                    startDate={props.startDate}
-                    endDate={props.endDate}
-                    maxDate={props.maxDate}
-                />
-            </div>
-            <div>
-                <DatePicker
-                    onChange={props.onChangeEndDate}
-                    monthsShown={props.monthsShown}
-                    selected={props.endDate}
-                    selectsStart={false} //// todo, check later if can be removed
-                    selectsEnd={true}
-                    startDate={props.startDate}
-                    endDate={props.endDate}
-                    maxDate={props.maxDate}
-                />
+            <div className="d-flex flex-row">
+                <div className="p-2">
+                    <DatePicker
+                        onChange={props.onChangeStartDate}
+                        monthsShown={props.monthsShown}
+                        selected={props.startDate}
+                        selectsStart={true}
+                        selectsEnd={false} // todo, check later if can be removed
+                        startDate={props.startDate}
+                        endDate={props.endDate}
+                        maxDate={props.maxDate}
+                    />
+                </div>
+                <div className="p-2">
+                    <DatePicker
+                        onChange={props.onChangeEndDate}
+                        monthsShown={props.monthsShown}
+                        selected={props.endDate}
+                        selectsStart={false} //// todo, check later if can be removed
+                        selectsEnd={true}
+                        startDate={props.startDate}
+                        endDate={props.endDate}
+                        maxDate={props.maxDate}
+                    />
+                </div>
             </div>
         </>);
     }
