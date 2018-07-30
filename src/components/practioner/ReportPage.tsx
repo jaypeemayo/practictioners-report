@@ -1,11 +1,10 @@
 import * as React from "react";
 import Report from "./Report";
 
-export interface IReportPage {
-
+export interface IReportPageProps {
 }
 
-export default class ReportPage extends React.Component<IReportPage, undefined> {
+export default class ReportPage extends React.Component<IReportPageProps, undefined> {
     render() {
         return (
             <>

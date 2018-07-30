@@ -1,11 +1,10 @@
 import * as React from "react";
 import AppointmentDetails from "./AppointmentDetails";
 
-export interface IAppointments {
-
+export interface IAppointmentsProps {
 }
 
-export default class Appointments extends React.Component<IAppointments, undefined> {
+export default class Appointments extends React.Component<IAppointmentsProps, undefined> {
     render() {
         return (
             <>

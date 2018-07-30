@@ -1,10 +1,9 @@
 import * as React from "react";
 
-export interface IAppointmentDetails {
-
+export interface IAppointmentDetailsProps {
 }
 
-export default class AppointmentDetails extends React.Component<IAppointmentDetails, undefined> {
+export default class AppointmentDetails extends React.Component<IAppointmentDetailsProps, undefined> {
     render() {
         return (
            <h3>Appointments Details</h3>
