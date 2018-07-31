@@ -1,10 +1,8 @@
 import * as React from "react";
 import AppointmentDetails from "./AppointmentDetails";
+import { IAppointment } from "./IAppointment";
 
-export interface IAppointmentProps {
-    date: string,
-    cost: string,
-    revenue: string
+export interface IAppointmentProps extends IAppointment {
 }
 
 export interface IAppointmentState {
@@ -27,7 +25,7 @@ export default class Appointment extends React.Component<IAppointmentProps, IApp
                 </tr>
                 {this.state.isAppointmentDetailsShown && <tr>
                     <td colSpan={3}>
-                        <AppointmentDetails />
+                        <AppointmentDetails {...this.props}/>
                     </td>
                 </tr>}
             </>

@@ -2,8 +2,10 @@ import * as React from "react";
 import AppointmentDetails from "./AppointmentDetails";
 import { Table } from "../../common/Table";
 import Appointment from "./Appointment";
+import { IAppointment } from "./IAppointment";
 
 export interface IAppointmentsProps {
+    appointments: IAppointment[];
 }
 
 export default class Appointments extends React.Component<IAppointmentsProps, undefined> {
@@ -17,14 +19,9 @@ export default class Appointments extends React.Component<IAppointmentsProps, un
                     <th scope="col">Revenue</th>
                 </tr>}>
                     <>
-                        <Appointment date={"10/10/2018"} cost="100" revenue="revenue" />
-                        <Appointment date={"10/10/2018"} cost="100" revenue="revenue" />
-                        <Appointment date={"10/10/2018"} cost="100" revenue="revenue" />
-                        <Appointment date={"10/10/2018"} cost="100" revenue="revenue" />
-                        <Appointment date={"10/10/2018"} cost="100" revenue="revenue" />
-                        <Appointment date={"10/10/2018"} cost="100" revenue="revenue" />
+                        {this.props.appointments.map(appointment => <Appointment {...appointment} />)}
                     </>
-                </Table>   
+                </Table>
             </div>
         );
     }

@@ -1,9 +1,10 @@
 import * as React from "react";
+import { IAppointment } from "./IAppointment";
 
-export interface IAppointmentDetailsProps {
+export interface IAppointmentDetailsProps extends IAppointment {
 }
 
-export default class AppointmentDetails extends React.Component<IAppointmentDetailsProps, undefined> {
+export default class AppointmentDetails extends React.Component<IAppointmentDetailsProps, undefined> { //todo make stateless component
     render() {
         return (<div className="border border-secondary">
             <h6 className="p-3 mb-2 bg-secondary text-white">Appointments Details</h6>
@@ -13,7 +14,7 @@ export default class AppointmentDetails extends React.Component<IAppointmentDeta
                     <strong> Client Name:</strong>
                 </div>
                 <div className="col-6">
-                    Jaypee Mayo
+                    {this.props.clientName}
                 </div>
 
             </div>
@@ -22,7 +23,7 @@ export default class AppointmentDetails extends React.Component<IAppointmentDeta
                     <strong>  Appointment Type:</strong>
                 </div>
                 <div className="col-6">
-                    Type 1
+                    {this.props.type}
                 </div>
 
             </div>
@@ -31,7 +32,7 @@ export default class AppointmentDetails extends React.Component<IAppointmentDeta
                     <strong>Duration:</strong>
                 </div>
                 <div className="col-6">
-                    50 mins
+                    {this.props.duration} min
                 </div>
 
             </div>
