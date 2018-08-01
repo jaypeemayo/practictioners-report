@@ -1,14 +1,10 @@
 import * as React from "react";
 import { FlexColumn } from "../../common/FlexColumn";
-import { AppointmentGroup } from "./AppointmentGroup";
-import { FlexRow } from "../../common/FlexRow";
-import Appointments from "./Appointments";
+import { Appointments } from "./Appointments";
 import { FaChevronUp } from 'react-icons/fa';
-
 import { FaChevronDown } from 'react-icons/fa';
 import { IPractitioner } from "./IPractitioner";
 import { IAppointment } from "./IAppointment";
-import { IAppointmentGroup } from "./IAppointmentGroup";
 import { AppointmentGroups } from "./AppointmentGroups";
 let moment = require("moment");
 if ("default" in moment) {
@@ -16,7 +12,6 @@ if ("default" in moment) {
 }
 export interface IPractitionerState {
     isAppointmentShown: boolean;
-
 }
 
 export interface IPractitionerProps extends IPractitioner {
@@ -36,6 +31,11 @@ export default class Practitioner extends React.Component<IPractitionerProps, IP
         }
     }
 
+    getGroupKey = (item: IAppointment) => {
+        return `${moment(item.date).format("MMM")} ${moment(item.date).format("YYYY")}`;
+        //return `Week ${Math.ceil(moment(item.date).date()/7)} of ${moment(item.date).format("MMMM")} ${moment(item.date).format("YYYY")}`;
+        //return moment(item.date).format("YYYY");
+    }
 
     render() {
         return (
@@ -43,7 +43,7 @@ export default class Practitioner extends React.Component<IPractitionerProps, IP
                 <FlexColumn>
                     <h4 className="p-3 mb-2 bg-primary text-white" onClick={this.onClick}>{this.props.name} {this.renderChevron()}</h4>
 
-                    <AppointmentGroups appointments={this.props.appointments} />
+                    <AppointmentGroups appointments={this.props.appointments} getGroupKey={this.getGroupKey} />
 
                     {this.state.isAppointmentShown && <div className={"p-2"}>
                         <Appointments appointments={this.props.appointments} />

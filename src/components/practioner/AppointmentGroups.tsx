@@ -11,16 +11,13 @@ if ("default" in moment) {
 
 export interface IAppointmentGroupsProps {
     appointments: IAppointment[];
+    getGroupKey:(item: IAppointment) => any;
 }
 
-export interface IAppointmentGroupsState {
-    groups: IAppointmentGroup[];
-}
-
-export class AppointmentGroups extends React.Component<IAppointmentGroupsProps, IAppointmentGroupsState>  {
-    componentDidMount() {
+export class AppointmentGroups extends React.Component<IAppointmentGroupsProps>  {
+    getGroupedAppointments = (): IAppointmentGroup[] =>{
         var groups: IAppointmentGroup[] = this.props.appointments.reduce((accumulator: IAppointmentGroup[], item: IAppointment) => {
-            let key = `${moment(item.date).format("MMMM")} ${moment(item.date).format("YYYY")}`;
+            let key = this.props.getGroupKey(item);
             let index: number = ArrayHelper.findIndex(accumulator, (g: IAppointmentGroup) => g.groupKey === key);
             if (index >= 0) {
                 let group = accumulator[index];
@@ -40,14 +37,13 @@ export class AppointmentGroups extends React.Component<IAppointmentGroupsProps, 
             return accumulator;
 
         }, [] as IAppointmentGroup[]);
-
-        this.setState({ groups: groups });
+        return groups;
     }
 
     render() {
         return (
             <FlexRow>
-                {this.state && this.state.groups.map(group =>
+                {this.getGroupedAppointments().map(group =>
                     <div className={"p-2"}>
                         <AppointmentGroup {...group} />
                     </div>

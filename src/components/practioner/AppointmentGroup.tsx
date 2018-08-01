@@ -4,8 +4,6 @@ import { FlexRow } from "../../common/FlexRow";
 import { Card } from "../../common/Card";
 import { IAppointmentGroup } from "./IAppointmentGroup";
 
-
-
 export interface IAppointmentGroupProps extends IAppointmentGroup {
 }
 
@@ -20,6 +18,10 @@ export const AppointmentGroup = (props: IAppointmentGroupProps) => {
                 <FlexRow>
                     <div>Revenue:</div>
                     <div>{props.revenue}</div>
+                </FlexRow>
+                <FlexRow>
+                    <div>Count:</div>
+                    <div>{props.count}</div>
                 </FlexRow>
             </FlexColumn>
         </Card>

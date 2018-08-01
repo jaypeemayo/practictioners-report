@@ -12,36 +12,28 @@ export interface IDateRangePickerProps {
     onChangeEndDate?: (date: moment.Moment) => void;
 }
 
-export default class DateRangePicker extends React.Component<IDateRangePickerProps> {
-    render() {
-        let props = this.props
-        return (<>
-            <div className="d-flex flex-row">
-                <div className="p-2">
-                    <DatePicker
-                        onChange={props.onChangeStartDate}
-                        monthsShown={props.monthsShown}
-                        selected={props.startDate}
-                        selectsStart={true}
-                        selectsEnd={false} // todo, check later if can be removed
-                        startDate={props.startDate}
-                        endDate={props.endDate}
-                        maxDate={props.maxDate}
-                    />
-                </div>
-                <div className="p-2">
-                    <DatePicker
-                        onChange={props.onChangeEndDate}
-                        monthsShown={props.monthsShown}
-                        selected={props.endDate}
-                        selectsStart={false} //// todo, check later if can be removed
-                        selectsEnd={true}
-                        startDate={props.startDate}
-                        endDate={props.endDate}
-                        maxDate={props.maxDate}
-                    />
-                </div>
-            </div>
-        </>);
-    }
-}
+export const DateRangePicker = (props: IDateRangePickerProps) =>
+    <div className="d-flex flex-row">
+        <div className="">
+            <DatePicker
+                onChange={props.onChangeStartDate}
+                monthsShown={props.monthsShown}
+                selected={props.startDate}
+                selectsStart={true}
+                startDate={props.startDate}
+                endDate={props.endDate}
+                maxDate={props.maxDate}
+            />
+        </div>
+        <div className="pl-2">
+            <DatePicker
+                onChange={props.onChangeEndDate}
+                monthsShown={props.monthsShown}
+                selected={props.endDate}
+                selectsEnd={true}
+                startDate={props.startDate}
+                endDate={props.endDate}
+                maxDate={props.maxDate}
+            />
+        </div>
+    </div>;
