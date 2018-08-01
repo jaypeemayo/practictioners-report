@@ -4,7 +4,7 @@ export interface IFlexRow {
     children: any;
 }
 export const FlexRow = (props: IFlexRow) => {
-    return <div className="d-flex flex-row flex-nowrap">
+    return <div className="d-flex flex-row flex-wrap">
         {props.children}
     </div>
 }

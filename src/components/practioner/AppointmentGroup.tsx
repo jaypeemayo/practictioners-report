@@ -2,17 +2,16 @@ import * as React from "react";
 import { FlexColumn } from "../../common/FlexColumn";
 import { FlexRow } from "../../common/FlexRow";
 import { Card } from "../../common/Card";
+import { IAppointmentGroup } from "./IAppointmentGroup";
 
 
-export interface ICostAndRevenueProps {
-    cost: string;
-    revenue: string;
-    title: string;
+
+export interface IAppointmentGroupProps extends IAppointmentGroup {
 }
 
-export const CostAndRevenue = (props: ICostAndRevenueProps) => {
+export const AppointmentGroup = (props: IAppointmentGroupProps) => {
     return (
-        <Card title={props.title}>
+        <Card title={props.groupKey}>
             <FlexColumn>
                 <FlexRow>
                     <div>Cost:</div>

@@ -1,7 +1,7 @@
 import * as React from "react";
 import AppointmentDetails from "./AppointmentDetails";
 import { IAppointment } from "./IAppointment";
-import { FaChevronDown, FaChevronUp } from "../../../node_modules/react-icons/fa";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 let moment = require("moment");
 if ("default" in moment) {
     moment = moment["default"];
