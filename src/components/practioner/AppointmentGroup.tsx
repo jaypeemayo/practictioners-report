@@ -19,10 +19,10 @@ export const AppointmentGroup = (props: IAppointmentGroupProps) => {
                     <div>Revenue:</div>
                     <div>{props.revenue}</div>
                 </FlexRow>
-                <FlexRow>
+                {/* <FlexRow>
                     <div>Count:</div>
                     <div>{props.count}</div>
-                </FlexRow>
+                </FlexRow> NOTE: FOR TESTING USE ONLY */} 
             </FlexColumn>
         </Card>
     );
