@@ -46,7 +46,6 @@ export default class PractitionerProvider extends React.Component<null, IPractit
                 return appointmentAccumulator;
             }, [] as IAppointment[]);
 
-
             let newPractioner: IPractitioner = { ...practionerItem, appointments: appointments };
 
             if (appointments.length > 0) {

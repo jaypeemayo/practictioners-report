@@ -3,7 +3,6 @@ import { Table } from "../../common/Table";
 import Appointment from "./Appointment";
 import { IAppointment } from "./IAppointment";
 
-
 export interface IAppointmentsProps {
     appointments: IAppointment[];
 }
@@ -19,7 +18,7 @@ export const Appointments = (props: IAppointmentsProps) =>
             <th scope="col"></th>
         </tr>}>
             <>
-                {props.appointments.map(appointment => <Appointment {...appointment} />)}
+                {props.appointments.map((appointment, i) => <Appointment key={i} {...appointment} />)}
             </>
         </Table>
     </div>;

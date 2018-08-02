@@ -4,7 +4,7 @@ import Report from "./Report";
 export interface IReportPageProps {
 }
 
-export default class ReportPage extends React.Component<IReportPageProps, undefined> {
+export default class ReportPage extends React.Component<IReportPageProps> {
     render() {
         return (
             <Report />
