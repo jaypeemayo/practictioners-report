@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App is rendered 1`] = `
+Array [
+  <h3>
+    Practitioner Report
+  </h3>,
+  <div
+    className="d-flex flex-column "
+  >
+    <div
+      className="p-2"
+    >
+      <div
+        className="d-flex flex-row flex-wrap"
+      >
+        <div
+          className="p-2"
+        >
+          <strong>
+             Search Practitioner:
+          </strong>
+        </div>
+        <div
+          className="p-2"
+        >
+          <input
+            onChange={[Function]}
+          />
+        </div>
+        <div
+          className="p-2"
+        >
+          <strong>
+            Date Range:
+          </strong>
+        </div>
+        <div
+          className="p-2"
+        >
+          <div
+            className="d-flex flex-row"
+          >
+            <div
+              className=""
+            >
+              <div>
+                <div
+                  className="react-datepicker-wrapper"
+                >
+                  <div
+                    className="react-datepicker__input-container"
+                  >
+                    <input
+                      className=""
+                      disabled={false}
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="pl-2"
+            >
+              <div>
+                <div
+                  className="react-datepicker-wrapper"
+                >
+                  <div
+                    className="react-datepicker__input-container"
+                  >
+                    <input
+                      className=""
+                      disabled={false}
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="p-2"
+        >
+          <input
+            onClick={[Function]}
+            type="button"
+            value="Search"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="p-2"
+    >
+      <div
+        className="d-flex flex-row flex-wrap"
+      />
+    </div>
+    <div
+      className="p-2"
+    />
+  </div>,
+]
+`;

@@ -16,6 +16,10 @@ export interface IAppointmentGroupsProps {
 
 export class AppointmentGroups extends React.Component<IAppointmentGroupsProps>  {
     getGroupedAppointments = (): IAppointmentGroup[] =>{
+        if(!this.props.appointments)
+        {
+            return [];
+        }
         var groups: IAppointmentGroup[] = this.props.appointments.reduce((accumulator: IAppointmentGroup[], item: IAppointment) => {
             let key = this.props.getGroupKey(item);
             let index: number = ArrayHelper.findIndex(accumulator, (g: IAppointmentGroup) => g.groupKey === key);
@@ -43,9 +47,9 @@ export class AppointmentGroups extends React.Component<IAppointmentGroupsProps> 
     render() {
         return (
             <FlexRow>
-                {this.getGroupedAppointments().map(group =>
-                    <div className={"p-2"}>
-                        <AppointmentGroup {...group} />
+                {this.getGroupedAppointments().map((group, i) =>
+                    <div key={i} className={"p-2"}>
+                        <AppointmentGroup key={i} {...group} />
                     </div>
                 )}
             </FlexRow>

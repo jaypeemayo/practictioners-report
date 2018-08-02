@@ -82,7 +82,7 @@ export default class Report extends React.Component<null, IReportState> {
                                     </FlexRow>
                                 </div>
                                 <div className="p-2">
-                                    {context.state.practitioners.map(practioner => <Practitioner {...practioner} />)}
+                                    {context.state.practitioners.map((practioner, i) => <Practitioner key={i} {...practioner} />)}
                                 </div>
                             </FlexColumn>
                         </>

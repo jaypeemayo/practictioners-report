@@ -1,10 +1,10 @@
 import * as React from 'react';
-import App from '../src/components/App';
 import * renderer from 'react-test-renderer';
+import ReportPage from '../../src/components/practioner/ReportPage';
 
-it('App is rendered', () => {
+it('ReportPage is rendered', () => {
     const component = renderer.create(
-        <App/>,
+        <ReportPage/>,
       );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();

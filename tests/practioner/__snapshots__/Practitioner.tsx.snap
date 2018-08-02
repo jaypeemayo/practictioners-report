@@ -1,0 +1,474 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Practioner with an appointment 1`] = `
+<div
+  className="border border-primary"
+>
+  <div
+    className="d-flex flex-column "
+  >
+    <h4
+      className="p-3 mb-2 bg-primary text-white"
+      onClick={[Function]}
+    >
+      DummyName
+       
+      <svg
+        attr={
+          Object {
+            "viewBox": "0 0 448 512",
+          }
+        }
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 448 512"
+        width="1em"
+      >
+        <path
+          d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+        />
+      </svg>
+    </h4>
+    <div
+      className="d-flex flex-row flex-wrap"
+    >
+      <div
+        className="p-2"
+      >
+        <div
+          className="border border-secondary"
+        >
+          <h5
+            className="p-3 mb-2 bg-secondary text-white"
+          >
+            Jan 1970
+          </h5>
+          <div
+            className="p-2"
+          >
+            <div
+              className="d-flex flex-column "
+            >
+              <div
+                className="d-flex flex-row flex-wrap"
+              >
+                <div>
+                  Cost:
+                </div>
+                <div>
+                  100
+                </div>
+              </div>
+              <div
+                className="d-flex flex-row flex-wrap"
+              >
+                <div>
+                  Revenue:
+                </div>
+                <div>
+                  300
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Practioners with empty appointments 1`] = `
+<div
+  className="border border-primary"
+>
+  <div
+    className="d-flex flex-column "
+  >
+    <h4
+      className="p-3 mb-2 bg-primary text-white"
+      onClick={[Function]}
+    >
+      DummyName
+       
+      <svg
+        attr={
+          Object {
+            "viewBox": "0 0 448 512",
+          }
+        }
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 448 512"
+        width="1em"
+      >
+        <path
+          d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+        />
+      </svg>
+    </h4>
+    <div
+      className="d-flex flex-row flex-wrap"
+    />
+  </div>
+</div>
+`;
+
+exports[`onclick header 1`] = `
+<div
+  className="border border-primary"
+>
+  <div
+    className="d-flex flex-column "
+  >
+    <h4
+      className="p-3 mb-2 bg-primary text-white"
+      onClick={[Function]}
+    >
+      DummyName
+       
+      <svg
+        attr={
+          Object {
+            "viewBox": "0 0 448 512",
+          }
+        }
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 448 512"
+        width="1em"
+      >
+        <path
+          d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+        />
+      </svg>
+    </h4>
+    <div
+      className="d-flex flex-row flex-wrap"
+    >
+      <div
+        className="p-2"
+      >
+        <div
+          className="border border-secondary"
+        >
+          <h5
+            className="p-3 mb-2 bg-secondary text-white"
+          >
+            Jan 1970
+          </h5>
+          <div
+            className="p-2"
+          >
+            <div
+              className="d-flex flex-column "
+            >
+              <div
+                className="d-flex flex-row flex-wrap"
+              >
+                <div>
+                  Cost:
+                </div>
+                <div>
+                  100
+                </div>
+              </div>
+              <div
+                className="d-flex flex-row flex-wrap"
+              >
+                <div>
+                  Revenue:
+                </div>
+                <div>
+                  300
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`onclick header 2`] = `
+<div
+  className="border border-primary"
+>
+  <div
+    className="d-flex flex-column "
+  >
+    <h4
+      className="p-3 mb-2 bg-primary text-white"
+      onClick={[Function]}
+    >
+      DummyName
+       
+      <svg
+        attr={
+          Object {
+            "viewBox": "0 0 448 512",
+          }
+        }
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 448 512"
+        width="1em"
+      >
+        <path
+          d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"
+        />
+      </svg>
+    </h4>
+    <div
+      className="d-flex flex-row flex-wrap"
+    >
+      <div
+        className="p-2"
+      >
+        <div
+          className="border border-secondary"
+        >
+          <h5
+            className="p-3 mb-2 bg-secondary text-white"
+          >
+            Jan 1970
+          </h5>
+          <div
+            className="p-2"
+          >
+            <div
+              className="d-flex flex-column "
+            >
+              <div
+                className="d-flex flex-row flex-wrap"
+              >
+                <div>
+                  Cost:
+                </div>
+                <div>
+                  100
+                </div>
+              </div>
+              <div
+                className="d-flex flex-row flex-wrap"
+              >
+                <div>
+                  Revenue:
+                </div>
+                <div>
+                  300
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="p-2"
+    >
+      <div
+        className="border border-secondary"
+      >
+        <h6
+          className="p-3 mb-2 bg-secondary text-white"
+        >
+          Appointments
+        </h6>
+        <table
+          className="table thead-light table-hover"
+        >
+          <thead
+            className="thead-light"
+          >
+            <tr>
+              <th
+                scope="col"
+              >
+                Date
+              </th>
+              <th
+                scope="col"
+              >
+                Time
+              </th>
+              <th
+                scope="col"
+              >
+                Cost
+              </th>
+              <th
+                scope="col"
+              >
+                Revenue
+              </th>
+              <th
+                scope="col"
+              />
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              onClick={[Function]}
+            >
+              <th
+                scope="row"
+              >
+                01/01/1970
+              </th>
+              <td>
+                10:00 AM
+              </td>
+              <td>
+                100
+              </td>
+              <td>
+                300
+              </td>
+              <td>
+                <svg
+                  attr={
+                    Object {
+                      "viewBox": "0 0 448 512",
+                    }
+                  }
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 448 512"
+                  width="1em"
+                >
+                  <path
+                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                  />
+                </svg>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`onclick header 3`] = `
+<div
+  className="border border-primary"
+>
+  <div
+    className="d-flex flex-column "
+  >
+    <h4
+      className="p-3 mb-2 bg-primary text-white"
+      onClick={[Function]}
+    >
+      DummyName
+       
+      <svg
+        attr={
+          Object {
+            "viewBox": "0 0 448 512",
+          }
+        }
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 448 512"
+        width="1em"
+      >
+        <path
+          d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+        />
+      </svg>
+    </h4>
+    <div
+      className="d-flex flex-row flex-wrap"
+    >
+      <div
+        className="p-2"
+      >
+        <div
+          className="border border-secondary"
+        >
+          <h5
+            className="p-3 mb-2 bg-secondary text-white"
+          >
+            Jan 1970
+          </h5>
+          <div
+            className="p-2"
+          >
+            <div
+              className="d-flex flex-column "
+            >
+              <div
+                className="d-flex flex-row flex-wrap"
+              >
+                <div>
+                  Cost:
+                </div>
+                <div>
+                  100
+                </div>
+              </div>
+              <div
+                className="d-flex flex-row flex-wrap"
+              >
+                <div>
+                  Revenue:
+                </div>
+                <div>
+                  300
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

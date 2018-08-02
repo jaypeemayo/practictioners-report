@@ -19,7 +19,7 @@ export const Appointments = (props: IAppointmentsProps) =>
             <th scope="col"></th>
         </tr>}>
             <>
-                {props.appointments.map(appointment => <Appointment {...appointment} />)}
+                {props.appointments.map((appointment, i) => <Appointment key={i} {...appointment} />)}
             </>
         </Table>
     </div>;
