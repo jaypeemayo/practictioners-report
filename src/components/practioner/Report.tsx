@@ -58,6 +58,7 @@ export default class Report extends React.Component<null, IReportState> {
                                         </div>
                                         <div className="p-2">
                                             <DateRangePicker
+                                                minDate={moment().subtract(3, "years")}
                                                 maxDate={moment()}
                                                 startDate={this.state.startDate}
                                                 endDate={this.state.endDate}

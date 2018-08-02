@@ -4,6 +4,7 @@ import DatePicker from "./DatePicker";
 import * as moment from "moment";
 
 export interface IDateRangePickerProps {
+    minDate?: moment.Moment;
     maxDate?: moment.Moment;
     startDate?: moment.Moment;
     endDate?: moment.Moment;
@@ -23,6 +24,7 @@ export const DateRangePicker = (props: IDateRangePickerProps) =>
                 startDate={props.startDate}
                 endDate={props.endDate}
                 maxDate={props.maxDate}
+                minDate={props.minDate}
             />
         </div>
         <div className="pl-2">
@@ -34,6 +36,7 @@ export const DateRangePicker = (props: IDateRangePickerProps) =>
                 startDate={props.startDate}
                 endDate={props.endDate}
                 maxDate={props.maxDate}
+                minDate={props.minDate}
             />
         </div>
     </div>;
