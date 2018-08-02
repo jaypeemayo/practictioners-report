@@ -43,9 +43,5 @@ test('Appointment onclick', () => {
       tree.props.onClick();
       tree = component.toJSON();
       expect(tree).toMatchSnapshot();
-      tree.props.onClick();
-      tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
-
 });
 
