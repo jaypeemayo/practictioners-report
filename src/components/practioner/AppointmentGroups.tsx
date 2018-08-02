@@ -11,13 +11,13 @@ if ("default" in moment) {
 
 export interface IAppointmentGroupsProps {
     appointments: IAppointment[];
-    getGroupKey:(item: IAppointment) => any;
+    groupBy:(item: IAppointment) => any;
 }
 
 export class AppointmentGroups extends React.Component<IAppointmentGroupsProps>  {
     getGroupedAppointments = (): IAppointmentGroup[] =>{
         var groups: IAppointmentGroup[] = this.props.appointments.reduce((accumulator: IAppointmentGroup[], item: IAppointment) => {
-            let key = this.props.getGroupKey(item);
+            let key = this.props.groupBy(item);
             let index: number = ArrayHelper.findIndex(accumulator, (g: IAppointmentGroup) => g.groupKey === key);
             if (index >= 0) {
                 let group = accumulator[index];

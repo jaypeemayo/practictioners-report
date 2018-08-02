@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Appointment 1`] = `
+exports[`should render appointment 1`] = `
 <tr
   onClick={[Function]}
 >
@@ -45,7 +45,7 @@ exports[`Appointment 1`] = `
 </tr>
 `;
 
-exports[`Appointment onclick 1`] = `
+exports[`should toggle when clicking appointment 1`] = `
 <tr
   onClick={[Function]}
 >
@@ -90,7 +90,7 @@ exports[`Appointment onclick 1`] = `
 </tr>
 `;
 
-exports[`Appointment onclick 2`] = `
+exports[`should toggle when clicking appointment 2`] = `
 Array [
   <tr
     onClick={[Function]}
@@ -153,7 +153,7 @@ Array [
             className="col-6 text-right display"
           >
             <strong>
-               Client Name:
+              Client Name:
             </strong>
           </div>
           <div
@@ -169,7 +169,7 @@ Array [
             className="col-6 text-right"
           >
             <strong>
-                Appointment Type:
+              Appointment Type:
             </strong>
           </div>
           <div

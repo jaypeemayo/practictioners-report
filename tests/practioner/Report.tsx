@@ -2,7 +2,7 @@ import * as React from 'react';
 import * renderer from 'react-test-renderer';
 import Report from '../../src/components/practioner/Report';
 
-it('Report is rendered', () => {
+it('should render Report', () => {
     const component = renderer.create(
         <Report/>,
       );

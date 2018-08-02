@@ -3,7 +3,6 @@ import { Table } from "../../common/Table";
 import Appointment from "./Appointment";
 import { IAppointment } from "./IAppointment";
 
-
 export interface IAppointmentsProps {
     appointments: IAppointment[];
 }

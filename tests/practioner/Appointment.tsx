@@ -2,7 +2,7 @@ import * as React from 'react';
 import * renderer from 'react-test-renderer';
 import Appointment from '../../src/components/practioner/Appointment';
 
-test('Appointment', () => {
+it('should render appointment', () => {
 
     let appointment = {
         clientName: "string",
@@ -22,7 +22,7 @@ test('Appointment', () => {
 });
 
 
-test('Appointment onclick', () => {
+it('should toggle when clicking appointment', () => {
 
     let appointment = {
         clientName: "string",

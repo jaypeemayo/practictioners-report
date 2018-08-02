@@ -3,7 +3,7 @@ import * renderer from 'react-test-renderer';
 import Practitioner from '../../src/components/practioner/Practitioner';
 import { IAppointment } from '../../src/components/practioner/IAppointment';
 
-test('Practioners with empty appointments', () => {
+test('it should handle empty appintments', () => {
     const component = renderer.create(
         <Practitioner name={"DummyName"} appointments={[]}/>,
       );
@@ -11,7 +11,7 @@ test('Practioners with empty appointments', () => {
       expect(tree).toMatchSnapshot();
 });
 
-test('Practioner with an appointment', () => {
+test('should render pratitioners', () => {
     const component = renderer.create(
         <Practitioner name={"DummyName"} appointments={[    {
             clientName: "string",
@@ -27,7 +27,7 @@ test('Practioner with an appointment', () => {
       expect(tree).toMatchSnapshot();
 });
 
-test('onclick header', () => {
+it('should toggle when practitioners name is clicked', () => {
     const component = renderer.create(
         <Practitioner name={"DummyName"} appointments={[    {
             clientName: "string",

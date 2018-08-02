@@ -2,7 +2,7 @@ import * as React from 'react';
 import App from '../src/components/App';
 import * renderer from 'react-test-renderer';
 
-it('App is rendered', () => {
+it('should render App', () => {
     const component = renderer.create(
         <App/>,
       );

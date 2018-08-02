@@ -10,7 +10,7 @@ export const AppointmentDetails = (props: IAppointmentDetailsProps) =>
 
         <div className="row">
             <div className="col-6 text-right display">
-                <strong> Client Name:</strong>
+                <strong>Client Name:</strong>
             </div>
             <div className="col-6">
                 {props.clientName}
@@ -19,7 +19,7 @@ export const AppointmentDetails = (props: IAppointmentDetailsProps) =>
         </div>
         <div className="row">
             <div className="col-6 text-right">
-                <strong>  Appointment Type:</strong>
+                <strong>Appointment Type:</strong>
             </div>
             <div className="col-6">
                 {props.type}
@@ -33,7 +33,6 @@ export const AppointmentDetails = (props: IAppointmentDetailsProps) =>
             <div className="col-6">
                 {props.duration} min
                 </div>
-
         </div>
     </div>;
 

@@ -1,91 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Practioner with an appointment 1`] = `
-<div
-  className="border border-primary"
->
-  <div
-    className="d-flex flex-column "
-  >
-    <h4
-      className="p-3 mb-2 bg-primary text-white"
-      onClick={[Function]}
-    >
-      DummyName
-       
-      <svg
-        attr={
-          Object {
-            "viewBox": "0 0 448 512",
-          }
-        }
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        strokeWidth="0"
-        style={
-          Object {
-            "color": undefined,
-          }
-        }
-        viewBox="0 0 448 512"
-        width="1em"
-      >
-        <path
-          d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-        />
-      </svg>
-    </h4>
-    <div
-      className="d-flex flex-row flex-wrap"
-    >
-      <div
-        className="p-2"
-      >
-        <div
-          className="border border-secondary"
-        >
-          <h5
-            className="p-3 mb-2 bg-secondary text-white"
-          >
-            Jan 1970
-          </h5>
-          <div
-            className="p-2"
-          >
-            <div
-              className="d-flex flex-column "
-            >
-              <div
-                className="d-flex flex-row flex-wrap"
-              >
-                <div>
-                  Cost:
-                </div>
-                <div>
-                  100
-                </div>
-              </div>
-              <div
-                className="d-flex flex-row flex-wrap"
-              >
-                <div>
-                  Revenue:
-                </div>
-                <div>
-                  300
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Practioners with empty appointments 1`] = `
+exports[`it should handle empty appintments 1`] = `
 <div
   className="border border-primary"
 >
@@ -128,7 +43,7 @@ exports[`Practioners with empty appointments 1`] = `
 </div>
 `;
 
-exports[`onclick header 1`] = `
+exports[`should render pratitioners 1`] = `
 <div
   className="border border-primary"
 >
@@ -213,7 +128,92 @@ exports[`onclick header 1`] = `
 </div>
 `;
 
-exports[`onclick header 2`] = `
+exports[`should toggle when practitioners name is clicked 1`] = `
+<div
+  className="border border-primary"
+>
+  <div
+    className="d-flex flex-column "
+  >
+    <h4
+      className="p-3 mb-2 bg-primary text-white"
+      onClick={[Function]}
+    >
+      DummyName
+       
+      <svg
+        attr={
+          Object {
+            "viewBox": "0 0 448 512",
+          }
+        }
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 448 512"
+        width="1em"
+      >
+        <path
+          d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+        />
+      </svg>
+    </h4>
+    <div
+      className="d-flex flex-row flex-wrap"
+    >
+      <div
+        className="p-2"
+      >
+        <div
+          className="border border-secondary"
+        >
+          <h5
+            className="p-3 mb-2 bg-secondary text-white"
+          >
+            Jan 1970
+          </h5>
+          <div
+            className="p-2"
+          >
+            <div
+              className="d-flex flex-column "
+            >
+              <div
+                className="d-flex flex-row flex-wrap"
+              >
+                <div>
+                  Cost:
+                </div>
+                <div>
+                  100
+                </div>
+              </div>
+              <div
+                className="d-flex flex-row flex-wrap"
+              >
+                <div>
+                  Revenue:
+                </div>
+                <div>
+                  300
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should toggle when practitioners name is clicked 2`] = `
 <div
   className="border border-primary"
 >
@@ -388,7 +388,7 @@ exports[`onclick header 2`] = `
 </div>
 `;
 
-exports[`onclick header 3`] = `
+exports[`should toggle when practitioners name is clicked 3`] = `
 <div
   className="border border-primary"
 >

@@ -33,7 +33,7 @@ export default class Report extends React.Component<null, IReportState> {
         this.setState({ endDate: date });
     }
 
-    onChange = (event: any) => {
+    onChangeInput = (event: any) => {
         this.setState({ searchText: event.target.value });
     }
 
@@ -51,7 +51,7 @@ export default class Report extends React.Component<null, IReportState> {
                                             <strong> Search Practitioner:</strong>
                                         </div>
                                         <div className="p-2">
-                                            <input onChange={this.onChange} />
+                                            <input onChange={this.onChangeInput} />
                                         </div>
                                         <div className="p-2">
                                             <strong>Date Range:</strong>
@@ -77,7 +77,7 @@ export default class Report extends React.Component<null, IReportState> {
                                     </FlexRow>
                                 </div>
                                 <div className="p-2">
-                                    {context.state.practitioners.map((practioner, i) => <Practitioner key={i} {...practioner} />)}
+                                    {context.state.practitioners.map((practitioner, i) => <Practitioner key={i} {...practitioner} />)}
                                 </div>
                             </FlexColumn>
                         </>

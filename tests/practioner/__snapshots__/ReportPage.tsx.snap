@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ReportPage is rendered 1`] = `
+exports[`should render ReportPage 1`] = `
 Array [
   <h3>
     Practitioner Report
