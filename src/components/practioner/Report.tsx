@@ -1,5 +1,5 @@
 import * as React from "react";
-import {DateRangePicker} from "../../common/DateRangePicker";
+import { DateRangePicker } from "../../common/DateRangePicker";
 import { Moment } from "moment";
 import { FlexRow } from "../../common/FlexRow";
 import { FlexColumn } from "../../common/FlexColumn";
@@ -15,6 +15,7 @@ export interface IReportState {
     startDate: Moment;
     endDate: Moment;
     searchText: string;
+    searchTextType: string;
     practitioners: IPractitioner[];
 }
 
@@ -23,6 +24,7 @@ export default class Report extends React.Component<null, IReportState> {
         startDate: undefined,
         endDate: undefined,
         searchText: "",
+        searchTextType: "",
         practitioners: []
     } as IReportState;
     onChangeStartDate = (date: Moment) => {
@@ -35,6 +37,14 @@ export default class Report extends React.Component<null, IReportState> {
 
     onChangeInput = (event: any) => {
         this.setState({ searchText: event.target.value });
+    }
+
+    onChangeInputType = (event: any, context: IPractitionerContextContext) => {
+        this.setState({ searchTextType: event.target.value }, ()=>{
+            context.get(this.state.searchText,
+                this.state.startDate ? this.state.startDate.toDate() : undefined,
+                this.state.endDate ? this.state.endDate.toDate() : undefined, this.state.searchTextType)
+        });
     }
 
     render() {
@@ -68,10 +78,16 @@ export default class Report extends React.Component<null, IReportState> {
                                             />
                                         </div>
                                         <div className="p-2">
+                                            <strong>Appointment Type:</strong>
+                                        </div>
+                                        <div className="p-2">
+                                            <input onChange={(event)=>{this.onChangeInputType(event, context)}} />
+                                        </div>
+                                        <div className="p-2">
                                             <input type="button" onClick={() => {
                                                 context.get(this.state.searchText,
                                                     this.state.startDate ? this.state.startDate.toDate() : undefined,
-                                                    this.state.endDate ? this.state.endDate.toDate() : undefined)
+                                                    this.state.endDate ? this.state.endDate.toDate() : undefined, this.state.searchTextType)
                                             }}
                                                 value="Search" />
                                         </div>
