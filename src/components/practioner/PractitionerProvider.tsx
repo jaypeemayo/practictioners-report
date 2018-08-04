@@ -1,8 +1,8 @@
 import * as React from "react";
-import axios from "axios";
 import { IPractitioner } from "./IPractitioner";
 import { IAppointment } from "./IAppointment";
 import { AuthorizationContext, IAuthorizationContextContext } from "../authorization/AuthorizationProvider";
+import { AxiosHelper } from "../../helpers/AxiosHelper";
 
 let moment = require("moment");
 if ("default" in moment) {
@@ -32,19 +32,17 @@ export default class PractitionerProvider extends React.Component<PractitionerPr
     get = async (searchText: string, startDate: Date, endDate: Date, searchTextType: string): Promise<void> => {
 
         //await axios.get(`http://localhost:3000/practitioners?name_like=${searchText}`)
-        //await axios.post(`https://corepluswebapi20180803083400.azurewebsites.net/api/practitioners?searchText=${searchText}&start=${start}&end=${end}&searchTextType=${searchTextType}`)
 
         const format = 'YYYY-MM-DDTHH:mm:ss';
         const start = startDate ? moment(startDate).format(format) : undefined;
         const end = endDate ? moment(endDate).format(format) : undefined;
         let bearerToken = `Bearer ${this.props.authContext.state.token}`;
-        await axios.get(`http://localhost:2553/api/practitioners?searchText=${searchText}&start=${start}&end=${end}&searchTextType=${searchTextType}`,
+        await AxiosHelper.instance.get(`/practitioners?searchText=${searchText}&start=${start}&end=${end}&searchTextType=${searchTextType}`,
             {
                 headers: {
                     "Authorization": bearerToken
                 }
             })
-            //await axios.get(`https://corepluswebapi20180803083400.azurewebsites.net/api/practitioners?searchText=${searchText}&start=${start}&end=${end}&searchTextType=${searchTextType}`)
             .then((response) => {
 
                 //date filtering should be done in server side. for demo purposes, i do it here.

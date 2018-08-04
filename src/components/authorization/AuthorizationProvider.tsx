@@ -1,5 +1,5 @@
 import * as React from "react";
-import axios from "axios";
+import { AxiosHelper } from "../../helpers/AxiosHelper";
 let moment = require("moment");
 if ("default" in moment) {
     moment = moment["default"];
@@ -22,8 +22,7 @@ export default class AuthorizationProvider extends React.Component<null, IAuthor
     }
 
     getToken = async (): Promise<void> => {
-        await axios.post(`http://localhost:2553/api/token`, {username: "mario", password: "secret"})
-        //await axios.post(`https://corepluswebapi20180803083400.azurewebsites.net/api/token`)
+        await AxiosHelper.instance.post(`/token`, {username: "mario", password: "secret"})
             .then((response) => {         
                 this.setState({ token: response.data.token as string });
             })

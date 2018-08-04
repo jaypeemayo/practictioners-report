@@ -25,8 +25,6 @@ export default class App extends React.Component<AppProps, undefined> {
                    </>
                )}
              </AuthorizationContext.Consumer>
-
-           
         </AuthorizationProvider>
     }
 }
