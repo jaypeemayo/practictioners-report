@@ -28,6 +28,10 @@ Array [
             onChange={[Function]}
           />
         </div>
+      </div>
+      <div
+        className="d-flex flex-row flex-wrap"
+      >
         <div
           className="p-2"
         >
@@ -93,13 +97,22 @@ Array [
             </div>
           </div>
         </div>
+      </div>
+      <div
+        className="d-flex flex-row flex-wrap"
+      >
+        <div
+          className="p-2"
+        >
+          <strong>
+            Appointment Type:
+          </strong>
+        </div>
         <div
           className="p-2"
         >
           <input
-            onClick={[Function]}
-            type="button"
-            value="Search"
+            onChange={[Function]}
           />
         </div>
       </div>
