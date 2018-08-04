@@ -26,13 +26,14 @@ export default class PractitionerProvider extends React.Component<null, IPractit
     get = async (searchText: string, startDate: Date, endDate: Date, searchTextType: string): Promise<void> => {
 
         //await axios.get(`http://localhost:3000/practitioners?name_like=${searchText}`)
-        //await axios.post(`https://corepluswebapi20180803083400.azurewebsites.net/api/practitioners`)
+        //await axios.post(`https://corepluswebapi20180803083400.azurewebsites.net/api/practitioners?searchText=${searchText}&start=${start}&end=${end}&searchTextType=${searchTextType}`)
 
         const format = 'YYYY-MM-DDTHH:mm:ss';
         const start = startDate ? moment(startDate).format(format) : undefined;
         const end = endDate ? moment(endDate).format(format) : undefined;
 
-        await axios.get(`http://localhost:2553/api/practitioners?searchText=${searchText}&start=${start}&end=${end}&searchTextType=${searchTextType}`)
+        //await axios.get(`http://localhost:2553/api/practitioners?searchText=${searchText}&start=${start}&end=${end}&searchTextType=${searchTextType}`)
+        await axios.get(`https://corepluswebapi20180803083400.azurewebsites.net/api/practitioners?searchText=${searchText}&start=${start}&end=${end}&searchTextType=${searchTextType}`)
             .then((response) => {
 
                 //date filtering should be done in server side. for demo purposes, i do it here.
