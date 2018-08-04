@@ -2,6 +2,8 @@ import * as React from "react";
 import axios from "axios";
 import { IPractitioner } from "./IPractitioner";
 import { IAppointment } from "./IAppointment";
+import { AuthorizationContext, IAuthorizationContextContext } from "../authorization/AuthorizationProvider";
+
 let moment = require("moment");
 if ("default" in moment) {
     moment = moment["default"];
@@ -13,11 +15,15 @@ export interface IPractitionerContextContext {
 
 export const PractitionerContext = React.createContext<IPractitionerContextContext>({ state: undefined, get: undefined } as IPractitionerContextContext);
 
+export interface PractitionerProps {
+    authContext: IAuthorizationContextContext;
+}
+
 export interface IPractitionerProviderState {
     practitioners: IPractitioner[];
 }
 
-export default class PractitionerProvider extends React.Component<null, IPractitionerProviderState> {
+export default class PractitionerProvider extends React.Component<PractitionerProps, IPractitionerProviderState> {
     state: IPractitionerProviderState = { practitioners: [] } as IPractitionerProviderState;
     componentDidMount() {
         this.get("", undefined, undefined, "");
@@ -31,9 +37,14 @@ export default class PractitionerProvider extends React.Component<null, IPractit
         const format = 'YYYY-MM-DDTHH:mm:ss';
         const start = startDate ? moment(startDate).format(format) : undefined;
         const end = endDate ? moment(endDate).format(format) : undefined;
-
-        //await axios.get(`http://localhost:2553/api/practitioners?searchText=${searchText}&start=${start}&end=${end}&searchTextType=${searchTextType}`)
-        await axios.get(`https://corepluswebapi20180803083400.azurewebsites.net/api/practitioners?searchText=${searchText}&start=${start}&end=${end}&searchTextType=${searchTextType}`)
+        let bearerToken = `Bearer ${this.props.authContext.state.token}`;
+        await axios.get(`http://localhost:2553/api/practitioners?searchText=${searchText}&start=${start}&end=${end}&searchTextType=${searchTextType}`,
+            {
+                headers: {
+                    "Authorization": bearerToken
+                }
+            })
+            //await axios.get(`https://corepluswebapi20180803083400.azurewebsites.net/api/practitioners?searchText=${searchText}&start=${start}&end=${end}&searchTextType=${searchTextType}`)
             .then((response) => {
 
                 //date filtering should be done in server side. for demo purposes, i do it here.
@@ -83,7 +94,7 @@ export default class PractitionerProvider extends React.Component<null, IPractit
         return (
             <PractitionerContext.Provider value={{
                 state: this.state,
-                get: this.get,
+                get: this.get
             }}>
                 {this.props.children}
             </PractitionerContext.Provider>

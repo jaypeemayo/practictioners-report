@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./../assets/scss/App.scss";
 import ReportPage from "./practioner/ReportPage";
+import AuthorizationProvider, { IAuthorizationContextContext, AuthorizationContext } from "./authorization/AuthorizationProvider";
 
 const reactLogo = require("./../assets/img/react_logo.svg");
 
@@ -16,6 +17,16 @@ export interface AppProps {
 
 export default class App extends React.Component<AppProps, undefined> {
     render() {
-        return <ReportPage/>;
+        return <AuthorizationProvider>
+              <AuthorizationContext.Consumer>
+               {(context: IAuthorizationContextContext) => (
+                   <>
+                   {context.state.token && <ReportPage />}                  
+                   </>
+               )}
+             </AuthorizationContext.Consumer>
+
+           
+        </AuthorizationProvider>
     }
 }
